@@ -1,0 +1,44 @@
+.input {
+    $root: &;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &__label {
+        margin-right: auto;
+    }
+
+    input {
+        width: 250px;
+        background: $light-grey;
+        line-height: 40px;
+        border-width: 0;
+        border-radius: 20px;
+        padding: 0 20px;
+    }
+
+    .err {
+        box-shadow: 0 0 10px $red-shadow;
+    }
+
+    .fill {
+        box-shadow: 0 0 10px $green-shadow;
+    }
+
+    &__error {
+        opacity: 0;
+
+        &.show {
+            text-align: center;
+            padding-top: 10px;
+            color: $red;
+            flex-basis: 100%;
+            opacity: 1;        
+            transition: all 0.5s ease 0s;
+            font-size: 14px;
+        }
+    }
+}

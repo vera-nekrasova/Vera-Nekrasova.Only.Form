@@ -1,0 +1,12 @@
+extends ../../app/pug/layout
+include ../../components/feedback-form/feedback-form
+
+block title
+    | Форма
+
+block content
+    main(data-barba="container" data-barba-namespace="index")
+        .container
+            +feedback-form({
+                title: 'Напишите нам'
+            })
