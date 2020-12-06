@@ -46,9 +46,9 @@ export default class Input extends Component.Default {
     validate = (reg: RegExp) => {
         let value = this.nInput.value.trim();
         const check = reg.test(value);
-        this.divError.classList.add('show');
 
         if (!check) {
+            this.divError.classList.add('show');
             this.hasError = true;
             this.nInput.classList.add('err');
             let text = this.name as keyof object;
@@ -67,9 +67,9 @@ export default class Input extends Component.Default {
 
     defaultValidate = () => {
         const value = this.nInput.value.trim();
-        this.divError.classList.add('show');
 
         if (value == "") {
+            this.divError.classList.add('show');
             this.nInput.classList.remove('fill');
             this.hasError = true;
             this.nInput.classList.add('err');
