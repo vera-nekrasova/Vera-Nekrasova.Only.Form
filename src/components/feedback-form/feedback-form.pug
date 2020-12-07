@@ -6,9 +6,9 @@ mixin feedback-form(props)
         if props.title
             .feedback-form__title= `${props.title}`
         +input({
-            label: 'Имя',
+            label: 'Имя Фамилия',
             name: 'name',
-            placeholder: 'Ваше имя',
+            placeholder: 'Ваше имя и фамилия',
             required: true
         }).feedback-form__input
         +input({
